@@ -1,305 +1,734 @@
-<script src="http://www.google.com/jsapi" type="text/javascript"></script> 
-<script type="text/javascript">google.load("jquery", "1.3.2");</script>
 
-<style type="text/css">
-	body {
-		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-		font-weight:300;
-		font-size:18px;
-		margin-left: auto;
-		margin-right: auto;
-		width: 1100px;
-	}
-	
-	h1 {
-		font-size:32px;
-		font-weight:300;
-	}
-	
-	.disclaimerbox {
-		background-color: #eee;		
-		border: 1px solid #eeeeee;
-		border-radius: 10px ;
-		-moz-border-radius: 10px ;
-		-webkit-border-radius: 10px ;
-		padding: 20px;
-	}
-
-	video.header-vid {
-		height: 140px;
-		border: 1px solid black;
-		border-radius: 10px ;
-		-moz-border-radius: 10px ;
-		-webkit-border-radius: 10px ;
-	}
-	
-	img.header-img {
-		height: 140px;
-		border: 1px solid black;
-		border-radius: 10px ;
-		-moz-border-radius: 10px ;
-		-webkit-border-radius: 10px ;
-	}
-	
-	img.rounded {
-		border: 1px solid #eeeeee;
-		border-radius: 10px ;
-		-moz-border-radius: 10px ;
-		-webkit-border-radius: 10px ;
-	}
-	
-	a:link,a:visited
-	{
-		color: #1367a7;
-		text-decoration: none;
-	}
-	a:hover {
-		color: #208799;
-	}
-	
-	td.dl-link {
-		height: 160px;
-		text-align: center;
-		font-size: 22px;
-	}
-	
-	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
-		box-shadow:
-		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
-		5px 5px 0 0px #fff, /* The second layer */
-		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
-		10px 10px 0 0px #fff, /* The third layer */
-		10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
-		15px 15px 0 0px #fff, /* The fourth layer */
-		15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
-		20px 20px 0 0px #fff, /* The fifth layer */
-		20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
-		25px 25px 0 0px #fff, /* The fifth layer */
-		25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
-		margin-left: 10px;
-		margin-right: 45px;
-	}
-
-	.paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
-		box-shadow:
-		0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
-
-		margin-left: 10px;
-		margin-right: 45px;
-	}
-
-
-	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
-		box-shadow:
-		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
-		5px 5px 0 0px #fff, /* The second layer */
-		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
-		10px 10px 0 0px #fff, /* The third layer */
-		10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
-		margin-top: 5px;
-		margin-left: 10px;
-		margin-right: 30px;
-		margin-bottom: 5px;
-	}
-	
-	.vert-cent {
-		position: relative;
-		top: 50%;
-		transform: translateY(-50%);
-	}
-	
-	hr
-	{
-		border: 0;
-		height: 1px;
-		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-	}
-</style>
 
 <html>
 <head>
-	<title>This is my paper title</title>
-	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
-	<meta property="og:title" content="Creative and Descriptive Paper Title." />
-	<meta property="og:description" content="Paper description." />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176384330-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-	<!-- Get from Google Analytics -->
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src=""></script> 
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+  gtag('config', 'UA-176384330-3');
+</script> -->
 
-		gtag('config', 'UA-75863369-6');
-	</script>
+
+  <!-- head -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="SinGAN-GIF: Learning from single GIF">
+  <meta name="description" content="SinGAN-GIF: Learning from single GIF">
+  <title>SinGAN-GIF: Learning from single GIF</title>
+
+  <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+  <script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+  <link rel="stylesheet" type="text/css" href="assets/text.css">
+
+  <meta property="og:image" content="src/c1c_teaser.png">
+  <meta property="og:title" content="SinGAN-GIF: Learning from single GIF">
 </head>
 
+
 <body>
-	<br>
-	<center>
-		<span style="font-size:36px">Creative and Descriptive Paper Title</span>
-		<table align=center width=600px>
-			<table align=center width=600px>
-				<tr>
-					<td align=center width=100px>
-						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">First Author</a></span>
-						</center>
-					</td>
-					<td align=center width=100px>
-						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Second Author</a></span>
-						</center>
-					</td>
-					<td align=center width=100px>
-						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Third Author</a></span>
-						</center>
-					</td>
-				</tr>
-			</table>
-			<table align=center width=250px>
-				<tr>
-					<td align=center width=120px>
-						<center>
-							<span style="font-size:24px"><a href=''>[Paper]</a></span>
-						</center>
-					</td>
-					<td align=center width=120px>
-						<center>
-							<span style="font-size:24px"><a href='https://github.com/richzhang/webpage-template'>[GitHub]</a></span><br>
-						</center>
-					</td>
-				</tr>
-			</table>
-		</table>
-	</center>
+<br>
+<center>
+  <span style="font-size:36px">
+SinGAN-GIF: Learning a Generative model from a single GIF </span></center>
+  <br>
+  <table align=center>
+      <tr>
+        <td align=center>
+            <span style="font-size:28px; border-right:50px solid transparent"><a href="https://sites.google.com/view/rajatswebspace/home">Rajat Arora</a></span>
+        </td>
+        <td align=center>
+            <span style="font-size:28px; border-right:50px solid transparent"><a href="https://www.cs.ucdavis.edu/~yjlee/">Yong Jae Lee</a></span>
+        </td>
+      </tr>
+</table>
+<br>
+<table align=center>
+        <tr>
+          <td align=center>
+              <span style="font-size:28px; border-right:50px solid transparent"><a href='https://openaccess.thecvf.com/content/WACV2021/papers/Arora_SinGAN-GIF_Learning_a_Generative_Video_Model_From_a_Single_GIF_WACV_2021_paper.pdf'>Paper</a></span>
+          </td>
+          <td align=center>
+              <span style="font-size:28px; border-right:50px solid transparent"><a href="https://youtu.be/B3Jdn4BHnZs">Video</a></span>
+          </td>
+        </tr>
+      </table>
 
-	<center>
-		<table align=center width=850px>
-			<tr>
-				<td width=260px>
-					<center>
-						<img class="round" style="width:500px" src="./resources/teaser.png"/>
-					</center>
-				</td>
-			</tr>
-		</table>
-		<table align=center width=850px>
-			<tr>
-				<td>
-					This was a template originally made for <a href="http://richzhang.github.io/colorization/">Colorful Image Colorization</a>. The code can be found in this <a href="https://github.com/richzhang/webpage-template">repository</a>.
-				</td>
-			</tr>
-		</table>
-	</center>
 
-	<hr>
+  <br>
+    <!-- <center>
+      <div class="container">
+        <div class="row">
+          <center>
+            <img src="src/c1c_teaser.png" alt="alt text" style="width: 100%; object-fit: cover; max-width:80%;"></a>
+          </center>
+          </div>
+    </center>
+  </center> -->
 
-	<table align=center width=850px>
-		<center><h1>Abstract</h1></center>
-		<tr>
-			<td>
-				This is my abstract.
-			</td>
-		</tr>
-	</table>
-	<br>
+  <table align=center>
+    <tr>
+      <td width
+        <center>
+          <img class="round" style="width:500px" src="./resources/concept.png"/>
+        </center>
+      </td>
+    </tr>
+  </table>
 
-	<hr>
-	<center><h1>Talk</h1></center>
-	<p align="center">
-		<iframe width="660" height="395" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center"></iframe>
-	</p>
+<hr>
+<h1>Abstract</h1>
+<div>
+We propose SinGAN-GIF which is an extension of SinGAN to short video snippets, often referred to as GIFs after the file format they are usually distributed in. Our method learns the distribution of both the image patches as well as their motion pattern. We do so by using a pyramid of 3D convolutional networks along with an image and a video discriminator. We show that though generative video models struggle to generate convincing results, our framework provides a good alternative to harness the power of GANs for various applications, working directly on video frames in entirety instead of working frame by frame.
+</div>
+<br>
 
-	<table align=center width=800px>
-		<br>
-		<tr>
-			<center>
-				<span style="font-size:28px"><a href=''>[Slides]</a>
-				</span>
-			</center>
-		</tr>
-	</table>
-	<hr>
+<hr>
+<left><h1>Random Samples</h1></left>
 
-	<center><h1>Code</h1></center>
+<table>
+  <tr>
+    <td co>
+      <h2>Original</h2>
+    </td>
+    <td>
+      <h2>Samples</h2>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    <!--<video id="video1" width="350" autoplay controls>
+      <source src="src/episode01-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/vid.gif" alt="HTML5 Icon"  style="border-right:50px solid transparent">
+    </td>
+    <td>
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/random_samples/0/vid.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/random_samples/1/vid.gif" alt="HTML5 Icon">
+    </td>
+    <td>
 
-	<table align=center width=420px>
-		<center>
-			<tr>
-				<td>
-				</td>
-			</tr>
-		</center>
-	</table>
-	<table align=center width=400px>
-		<tr>
-			<td align=center width=400px>
-				<center>
-					<td><img class="round" style="width:450px" src="./resources/method_diagram.png"/></td>
-				</center>
-			</td>
-		</tr>
-	</table>
-	<table align=center width=850px>
-		<center>
-			<tr>
-				<td>
-					Short description if wanted
-				</td>
-			</tr>
-		</center>
-	</table>
-	<table align=center width=800px>
-		<br>
-		<tr><center>
-			<span style="font-size:28px">&nbsp;<a href='https://github.com/richzhang/webpage-template'>[GitHub]</a>
-			</center>
-		</span>
-	</table>
-	<br>
-	<hr>
-	<table align=center width=450px>
-		<center><h1>Paper and Supplementary Material</h1></center>
-		<tr>
-			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
-			<td><span style="font-size:14pt">F. Author, S. Author, T. Author.<br>
-				<b>Creative and Descriptive Paper Title.</b><br>
-				In Conference, 20XX.<br>
-				(hosted on <a href="">ArXiv</a>)<br>
-				<!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
-				<span style="font-size:4pt"><a href=""><br></a>
-				</span>
-			</td>
-		</tr>
-	</table>
-	<br>
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/random_samples/2/vid.gif" alt="HTML5 Icon">
+    </td>
+    <td>
 
-	<table align=center width=600px>
-		<tr>
-			<td><span style="font-size:14pt"><center>
-				<a href="./resources/bibtex.txt">[Bibtex]</a>
-			</center></td>
-		</tr>
-	</table>
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/random_samples/3/vid.gif" alt="HTML5 Icon">
+    </td>
+    <td>
 
-	<hr>
-	<br>
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/random_samples/4/vid.gif" alt="HTML5 Icon">
+    </td>
+    <td>
 
-	<table align=center width=900px>
-		<tr>
-			<td width=400px>
-				<left>
-					<center><h1>Acknowledgements</h1></center>
-					This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be found <a href="https://github.com/richzhang/webpage-template">here</a>.
-				</left>
-			</td>
-		</tr>
-	</table>
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/random_samples/5/vid.gif" alt="HTML5 Icon">
+    </td>
+  </tr>
+
+  <tr>
+
+    <td>
+    <!--<video id="video1" width="350" autoplay controls>
+      <source src="src/episode01-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/seashore.gif" alt="HTML5 Icon"  style="border-right:50px solid transparent">
+    </td>
+    <td>
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/seashore2/1/vid.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/seashore2/2/vid.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/seashore2/3/vid.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/seashore2/4/vid.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/seashore2/5/vid.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/seashore2/1/vid.gif" alt="HTML5 Icon">
+    </td>
+    <!-- <td align=left width=130px>
+    <video id="video1" width="350" autoplay controls>
+      <source src="src/episode09-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>
+    </td>
+
+    <td align=left width=130px>
+    <video id="video1" width="350" autoplay controls>
+      <source src="src/episode16-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>
+    </td> -->
+
+  </tr>
+
+  <tr>
+
+    <td>
+    <!--<video id="video1" width="350" autoplay controls>
+      <source src="src/episode01-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/birds.gif" alt="HTML5 Icon"  style="border-right:50px solid transparent">
+    </td>
+    <td>
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/birds32/1/vid.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/birds32/2/vid.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/birds32/3/vid.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/birds32/4/vid.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/birds32/5/vid.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/birds32/1/vid.gif" alt="HTML5 Icon">
+    </td>
+    <!-- <td align=left width=130px>
+    <video id="video1" width="350" autoplay controls>
+      <source src="src/episode09-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>
+    </td>
+
+    <td align=left width=130px>
+    <video id="video1" width="350" autoplay controls>
+      <source src="src/episode16-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>
+    </td> -->
+
+  </tr>
+
+
+  <tr>
+
+    <td>
+    <!--<video id="video1" width="350" autoplay controls>
+      <source src="src/episode01-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/desert.gif" alt="HTML5 Icon"  style="border-right:50px solid transparent">
+    </td>
+    <td>
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/desert/_1/0/30.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/desert/_2/0/31.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/desert/_3/0/32.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/desert/_4/0/33.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/desert/_5/0/34.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/desert/_6/0/35.gif" alt="HTML5 Icon">
+    </td>
+    <!-- <td align=left width=130px>
+    <video id="video1" width="350" autoplay controls>
+      <source src="src/episode09-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>
+    </td>
+
+    <td align=left width=130px>
+    <video id="video1" width="350" autoplay controls>
+      <source src="src/episode16-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>
+    </td> -->
+
+  </tr>
+
+  <tr>
+
+    <td>
+    <!--<video id="video1" width="350" autoplay controls>
+      <source src="src/episode01-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/cliff.gif" alt="HTML5 Icon"  style="border-right:50px solid transparent">
+    </td>
+    <td>
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/cliff/_1/0/0.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/cliff/_2/0/0.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/cliff/_3/0/0.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/cliff/_4/0/0.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/cliff/_5/0/0.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/cliff/_6/0/0.gif" alt="HTML5 Icon">
+    </td>
+    <!-- <td align=left width=130px>
+    <video id="video1" width="350" autoplay controls>
+      <source src="src/episode09-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>
+    </td>
+
+    <td align=left width=130px>
+    <video id="video1" width="350" autoplay controls>
+      <source src="src/episode16-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>
+    </td> -->
+
+  </tr>
+
+</table>
 
 <br>
-</body>
-</html>
 
+
+<hr>
+
+<left><h1>Changing Aspect Ratio</h1></left>
+<table>
+  <tr>
+    <td>
+
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/random_samples_seashore_scaled/seashore2/1/0/vid.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/random_samples_seashore_scaled/seashore2/2/0/vid.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/random_samples_seashore_scaled/seashore2/3/0/vid.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/random_samples_seashore_scaled/seashore2/4/0/vid.gif" alt="HTML5 Icon">
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/random_samples_mix_final_scaled/0/vid.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/random_samples_mix_final_scaled/1/vid.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/random_samples_mix_final_scaled/2/vid.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/random_samples_mix_final_scaled/3/vid.gif" alt="HTML5 Icon">
+    </td>
+  </tr>
+
+
+
+</table>
+
+<table>
+  <tr>
+    <td>
+
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/mountains16/_1/0/0.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/mountains16/_2/0/1.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/mountains16/_3/0/2.gif" alt="HTML5 Icon">
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/desert8/_1/0/0.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/desert8/_3/0/2.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/desert8/_4/0/3.gif" alt="HTML5 Icon">
+    </td>
+    <td>
+
+      <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <img src="data/desert8/_5/0/4.gif" alt="HTML5 Icon">
+    </td>
+  </tr>
+</table>
+<br>
+<hr>
+
+<left><h1>Video Super Resolution (Vid 4 dataset)</h1></left>
+<hr>
+  <h2>Original</h2>
+  <video width="50%" height="50%" controls>
+  <source src="data/city_lr.mp4" type="video/mp4">
+  </video>
+<h2>SuperRes</h2>
+<video width="50%" height="50%" controls>
+<source src="data/city_sr.mp4" type="video/mp4">
+</video>
+<br>
+<hr>
+  <h2>Original</h2>
+  <video width="50%" height="50%" controls>
+  <source src="data/walk_lr.mp4" type="video/mp4">
+  </video>
+<h2>SuperRes</h2>
+<video width="50%" height="50%" controls>
+<source src="data/walk_sr.mp4" type="video/mp4">
+</video>
+<br>
+<hr>
+  <h2>Original</h2>
+  <video width="50%" height="50%" controls>
+  <source src="data/foliage_lr.mp4" type="video/mp4">
+  </video>
+<h2>SuperRes</h2>
+<video width="50%" height="50%" controls>
+<source src="data/foliage_sr.mp4" type="video/mp4">
+</video>
+<br>
+<hr>
+  <h2>Original</h2>
+  <video width="50%" height="50%" controls>
+  <source src="data/calendar_lr.mp4" type="video/mp4">
+  </video>
+<h2>SuperRes</h2>
+<video width="50%" height="50%" controls>
+<source src="data/calendar_sr.mp4" type="video/mp4">
+</video>
+<br>
+<hr>
+
+<left><h1>Motion Transfer</h1></left>
+<table>
+<tr>
+  <td>
+    <h2>Original Video</h2>
+  </td>
+  <td>
+    <h2>Image</h2>
+  </td>
+<td>
+  <h2>Output</h2>
+</td>
+</tr>
+<tr>
+  <td>
+  <img src="data/real_pace.gif" alt="HTML5 Icon" style="border-right:20px solid transparent">
+  </td>
+  <td>
+
+  <img  src="data/waterfall_diff2.jpeg" alt="HTML5 Icon" style="border-right:20px solid transparent">
+  </td>
+  <td>
+  <img src="data/motion_transfer.gif" alt="HTML5 Icon">
+  </td>
+</tr>
+</table>
+<hr>
+
+<left><h1>Video Editing</h1></left>
+<table>
+<tr>
+  <td co>
+    <h2>Translated Video</h2>
+  </td>
+  <td>
+    <h2>Corrected</h2>
+  </td>
+</tr>
+<tr>
+  <td>
+
+    <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+    Your browser does not support HTML5 video.
+  </video>-->
+  <img src="data/shifted_desert.gif" alt="HTML5 Icon" style="border-right:20px solid transparent">
+  </td>
+  <td>
+
+    <!--    <video id="video1" width="350" autoplay controls>
+<source src="src/episode05-v1.webm" type="video/webm">
+    Your browser does not support HTML5 video.
+  </video>-->
+  <img src="data/desert_correct.gif" alt="HTML5 Icon">
+  </td>
+</tr>
+</table>
+
+
+
+<hr>
+
+<left><h1>Video Slo Mo</h1></left>
+<table>
+<tr>
+  <td co>
+    <h2>Original</h2>
+  </td>
+  <td>
+    <h2>Random Slow Sample</h2>
+  </td>
+</tr>
+<tr>
+  <td>
+  <img src="data/real_pace.gif" alt="HTML5 Icon" style="border-right:20px solid transparent">
+  </td>
+  <td>
+  <img src="data/slow.gif" alt="HTML5 Icon">
+  </td>
+</tr>
+</table>
+
+
+<hr>
+
+<table align=center width=900px>
+  <tr>
+    <td width=400px>
+      <left>
+        <center><h1>Acknowledgements</h1></center>
+        This template has been partially borrowed from <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be found <a href="https://github.com/richzhang/webpage-template">here</a>.
+      </left>
+    </td>
+  </tr>
+</table> -->
